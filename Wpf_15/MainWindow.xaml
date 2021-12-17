@@ -1,0 +1,186 @@
+﻿<Window x:Class="Wpf_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="docViewer" Grid.Row="0">
+            <FlowDocument  FontSize="12">
+                <Paragraph TextIndent="20" FontSize="20" TextAlignment="Center">
+                    <Bold> Котировки индексов после закрытия рынка 16.12.2021</Bold>
+                </Paragraph>
+                
+                <Paragraph>
+                    <Bold> Американский</Bold> рынок акций начал торги на
+                    <Run Foreground="Green" FontWeight="Bold">позитивной ноте</Run> ноте, однако затем два из трех основных индексов ушли в
+                    <Run Foreground="Red" FontWeight="Bold">минус</Run>.
+                </Paragraph>
+                <Paragraph>
+                    Федрезерв днем ранее
+                    <Hyperlink NavigateUri="https://kursiv.kz/news/v-mire/2021-12/zasedanie-frs-delisting-na-birzhakh-ssha-zamena-swift">сохранил процентную ставку</Hyperlink> в диапазоне от 0% до 0,25% годовых, как и ожидалось. 
+                    Также ФРС сообщил, что уменьшит объемы выкупа активов на
+                    <Bold>$30 млрд</Bold>. 
+                    С января ежемесячные покупки US Treasuries будут сокращены на
+                    <Bold>$20 млрд - до $40 млрд</Bold> , ипотечных бондов - на
+                    <Bold>$10 млрд, до $20 млрд</Bold>.
+                </Paragraph>
+
+                <Table>
+                    <Table.Columns>
+                        <TableColumn Width="100"/>
+                        <TableColumn Width="100"/>
+                        <TableColumn Width="100"/>
+                        <TableColumn Width="100"/>
+                    </Table.Columns>
+                    <TableRowGroup >
+                        <TableRow FontWeight="Bold" >
+                            <TableCell >
+                                <Paragraph>
+                                Название 
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell >
+                                <Paragraph>
+                                    Цена
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Изм. 
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    Изм.%
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell >
+                                <Paragraph>
+                                    SP 500
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Red" FontWeight="Bold">
+                                <Paragraph>
+                                    4.681,60
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Foreground="Red">
+                                    -28,24
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Red">
+                                <Paragraph>
+                                    -0,60%
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell >
+                                <Paragraph>
+                                    Nasdaq
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Red" FontWeight="Bold">
+                                <Paragraph>
+                                    15.223,1
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Red">
+                                <Paragraph>
+                                    -342,4
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Red">
+                                <Paragraph>
+                                    -2,20%
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell >
+                                <Paragraph>
+                                    Dow Jones
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Green" FontWeight="Bold">
+                                <Paragraph>
+                                    35.994,00
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Green">
+                                <Paragraph>
+                                    +66,57
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell Foreground="Green">
+                                <Paragraph>
+                                    +0,19%
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                        <TableCell >
+                            <Paragraph>
+                                    Russell 2000
+                                </Paragraph>
+                        </TableCell>
+                            <TableCell Foreground="Red" FontWeight="Bold">
+                            <Paragraph>
+                                    2.155,00
+                                </Paragraph>
+                        </TableCell>
+                            <TableCell Foreground="Red">
+                            <Paragraph>
+                                    -40,21
+                                </Paragraph>
+                        </TableCell>
+                            <TableCell Foreground="Red">
+                            <Paragraph>
+                                    -1,83%
+                                </Paragraph>
+                        </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph>
+                    Экономист назвал причины падения рынка акций:
+                </Paragraph>
+                <List MarkerStyle="Disc" MarkerOffset="1">
+                    <ListItem>
+                        <Paragraph FontStyle="Italic" >
+                        Была спровоцирована серия маржин-коллов с 7 утра, когда рынок тонкий.
+                        Сработали стоп-приказы еще спящих инвесторов 
+                        Поэтому мы увидели такой провал в первый час торговли.
+                   </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph FontStyle="Italic">
+                            Среди прочих причин падения рынка экономист назвал «Украину,
+                        «Северный поток – 2», которые влияют на стоимость акций «уже давно».
+                            </Paragraph>
+                        </ListItem>
+                </List>
+                <Paragraph>
+                Таким образом, сегодняшнее падение рынка акций Брагин связал со «стечением технических и фундаментальных обстоятельств, 
+                в том числе беспокойства по поводу геополитических рисков, 
+                что привело к созданию такой неординарной ситуации на рынке».
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
